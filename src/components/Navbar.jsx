@@ -28,7 +28,7 @@ export const Navbar = () => {
     }
 
     return (
-        <header className='max-w-screen-2xl mx-auto px-4 py-6 '>
+        <header className='max-w-screen-2xl mx-auto px-4 py-6 bg-green-700 text-Third'>
             <nav className='flex justify-between items-center'>
                 <div className='flex item-center md:gap-16 gap-4' >
                     <Link to="/">
@@ -52,12 +52,12 @@ export const Navbar = () => {
                                 {/* show dropdowns */}
                                 {
                                 isDropdownOpen && (
-                                    <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40">
+                                    <div className="absolute right-0 mt-2 w-48 bg-white shadow-lg rounded-md z-40 text-dark">
                                         <ul className="py-2">
                                             {
                                                 navigation.map((item) => (
                                                     <li key={item.name} onClick={() => setIsDropdownOpen(false)}>
-                                                        <Link to={item.href} className="block px-4 py-2 text-sm hover:bg-gray-100">
+                                                        <Link to={item.href} className="block px-4 py-2 text-sm hover:bg-green-700">
                                                             {item.name}
                                                         </Link>
                                                     </li>
@@ -66,7 +66,7 @@ export const Navbar = () => {
                                             <li>
                                                 <button
                                                 onClick={handleLogOut}
-                                                className="block w-full text-left px-4 py-2 text-sm hover:bg-gray-100">Logout</button>
+                                                className="block w-full text-left px-4 py-2 text-sm hover:bg-green-700">Logout</button>
                                             </li>
                                         </ul>
                                     </div>

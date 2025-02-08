@@ -16,7 +16,7 @@ const OrderPage = () => {
                 orders.length === 0 ? (<div>No orders found!</div>) : (<div>
                     {
                         orders.map((order, index) => (
-                            <div key={order._id} className="border-b mb-4 pb-4">
+                            <div key={order._id} className="border-b mb-4 pb-4 bg-yellow px-3 py-2">
                                 <p className='p-1 bg-secondary text-white w-10 rounded mb-1'># {index + 1}</p>
                                 <h2 className="font-bold">Order ID: {order._id}</h2>
                                 <p className="text-gray-600">Name: {order.name}</p>

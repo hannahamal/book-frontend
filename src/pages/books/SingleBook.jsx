@@ -1,6 +1,7 @@
 import React from 'react'
 import { FiShoppingCart } from "react-icons/fi"
 import { useParams } from "react-router-dom"
+import { Link } from 'react-router-dom';
 
 
 import { useDispatch } from 'react-redux';
@@ -21,7 +22,7 @@ const SingleBook = () => {
     if(isLoading) return <div>Loading...</div>
     if(isError) return <div>Error happending to load book info</div>
   return (
-    <div className="max-w-lg shadow-md p-5">
+    <div className="max-w-lg shadow-md p-5 py-1">
             <h1 className="text-2xl font-bold mb-6">{book.title}</h1>
 
             <div className=''>
@@ -44,11 +45,13 @@ const SingleBook = () => {
                     <p className="text-gray-700"><strong>Description:</strong> {book.description}</p>
                 </div>
 
-                <button onClick={() => handleAddToCart(book)} className="btn-primary px-6 space-x-1 flex items-center gap-1 ">
+                {/* <button onClick={() => handleAddToCart(book)} className="btn-primary px-6 space-x-1 flex items-center gap-1 "> */}
+                <Link to="/" className="btn-primary px-6 space-x-1 flex items-center gap-1 ">
                     <FiShoppingCart className="" />
                     <span>Add to Cart</span>
+                    </Link>
 
-                </button>
+                {/* </button> */}
             </div>
         </div>
   )

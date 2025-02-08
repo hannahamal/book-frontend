@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 
 const AddBook = () => {
     const { register, handleSubmit, formState: { errors }, reset } = useForm();
-    const [imageFile, setimageFile] = useState(null);
+    const [imageFile, setimageFile] = useState();
     const [addBook, {isLoading, isError}] = useAddBookMutation()
     const [imageFileName, setimageFileName] = useState('')
     const onSubmit = async (data) => {
@@ -29,7 +29,7 @@ const AddBook = () => {
               });
               reset();
               setimageFileName('')
-              setimageFile(null);
+              setimageFile();
         } catch (error) {
             console.error(error);
             alert("Failed to add book. Please try again.")   
